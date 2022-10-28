@@ -2,6 +2,9 @@ import React from 'react';
 
 import Menu from './Menu'
 import Counter from './Counter'
+import ColorFlipper from './ColorFlipper'
+import ColorFlipperHex from './ColorFlipperHex'
+import Reviews from './Reviews'
 
 class MainPage extends React.Component {
     constructor(props){
@@ -19,11 +22,23 @@ class MainPage extends React.Component {
                 <div>
                     {
                         this.state.currentPage === 'Menu' &&
-                        <Menu/>
+                        <Menu />
                     }
                     {
                         this.state.currentPage === 'Counter' &&
-                        <Counter/>
+                        <Counter />
+                    }
+                    {
+                        this.state.currentPage === 'ColorFlipper' &&
+                        <ColorFlipper />
+                    }
+                    {
+                        this.state.currentPage === 'ColorFlipperHex' &&
+                        <ColorFlipperHex />
+                    }
+                     {
+                        this.state.currentPage === 'Reviews' &&
+                        <Reviews />
                     }
                 </div>
             </div>
